@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace linq
 {
-    internal class Task5
+    internal static class Task5
     {
         public static IEnumerable<CTestEntity> SelectNameGreaterThanPosition(IEnumerable<CTestEntity> data)
         {

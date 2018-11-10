@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using static linq.Task4;
 using static linq.Task5;
 using static linq.Task6;
+using static linq.Task7;
 
 namespace linq
 {
@@ -13,6 +14,7 @@ namespace linq
     {
         private static IEnumerable<CTestEntity> testData = CreateTestCollection();
         private static String sentence = "Это что же получается: ходишь, ходишь в школу, а потом бац - вторая смена";
+        private static String toBook = "This dog eats too much vegetables after lunch";
 
         public static void Main(string[] args)
         {
@@ -40,7 +42,10 @@ namespace linq
                 }
             }
 
-
+            // Test for 7th task
+            Console.WriteLine('\n' + "Testing 7th task: ");
+            Console.WriteLine(toBook);
+            Console.WriteLine($"Translation: \n{TranslateToBook(toBook, 3)}");
         }
 
         private static void PrintCollection(IEnumerable<CTestEntity> data)

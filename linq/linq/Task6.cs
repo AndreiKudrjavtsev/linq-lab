@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace linq
 {
-    internal class Task6
+    internal static class Task6
     {
         public static IEnumerable<IGrouping<Int32, String>> GroupSentence(String sentence)
         {
