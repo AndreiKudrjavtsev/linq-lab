@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using static linq.Task4;
 using static linq.Task5;
+using static linq.Task6;
 
 namespace linq
 {
     internal class Program
     {
         private static IEnumerable<CTestEntity> testData = CreateTestCollection();
+        private static String sentence = "Это что же получается: ходишь, ходишь в школу, а потом бац - вторая смена";
 
         public static void Main(string[] args)
         {
@@ -22,8 +24,23 @@ namespace linq
             Console.WriteLine(ConcatExceptFirstThree(testData, '/') + '\n');
             
             // Test for 5tn task
-            Console.WriteLine("Testing 5th task:");
+            Console.WriteLine("Testing 5th task: ");
             PrintCollection(SelectNameGreaterThanPosition(testData));
+
+            // Test for 6th task
+            Console.WriteLine('\n' + "Testing 6th task: ");
+            Console.WriteLine(sentence);
+            var result = GroupSentence(sentence);
+            foreach (var group in result)
+            {
+                Console.WriteLine($"Длина слов в группе: {group.Key}");
+                foreach (var item in group)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+
         }
 
         private static void PrintCollection(IEnumerable<CTestEntity> data)

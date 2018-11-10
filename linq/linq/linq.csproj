@@ -48,6 +48,8 @@
     <Compile Include="CTestEntity.cs" />
     <Compile Include="Task4.cs" />
     <Compile Include="Task5.cs" />
+    <Compile Include="Task6.cs" />
+    <Compile Include="test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
